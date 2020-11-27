@@ -29,19 +29,18 @@ for line in f:
 
 grades=[0,1,2,3,4,5,6,7,8,9,10]
 
-fig, axes = plt.subplots(figsize=(len(prep)*2,3),nrows=1,ncols=len(prep))
+fig, axes1 = plt.subplots(figsize=(len(prep)*2,3),nrows=1,ncols=len(prep))
 for i in range(len(prep)):
-    axes[i].pie(p_gr[i],radius=1)
-    axes[i].set_title('prep {0}'.format(i+1))
+    axes1[i].pie(p_gr[i],radius=1)
+    axes1[i].set_title('prep {0}'.format(i+1))
 plt.legend(grades,loc="center right",bbox_to_anchor=(1.2, 0, 0.5, 1))
-plt.show()
+#plt.show()
 
-fig, axes = plt.subplots(figsize=(len(group)*2,3),nrows=1,ncols=len(group))
+fig, axes2 = plt.subplots(figsize=(len(group)*2,3),nrows=1,ncols=len(group))
 for i in range(len(group)):
-    axes[i].pie(p_gr[i],radius=1)
-    axes[i].set_title('group {0}'.format(i+1))
+    axes2[i].pie(p_gr[i],radius=1)
+    axes2[i].set_title('group {0}'.format(i+1))
 plt.legend(grades,loc="center right",bbox_to_anchor=(1.2, 0, 0.5, 1))
-plt.show()
 
 h_prep=-1
 nh_prep=-1
@@ -77,3 +76,5 @@ for i in range(len(group)):
 print("holjavnij prep: ", h_prep+1)
 print("neholjavnij prep: ", nh_prep+1)
 print("razdolbajskaja gruppa: ", razd_g+1)
+
+plt.show()
